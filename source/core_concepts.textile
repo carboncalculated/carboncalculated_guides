@@ -1,0 +1,16 @@
+h2. Core Concepts
+
+The guide covers some of the core concepts of CarbonCalculated. By referring
+to this guide, you will be able to:
+
+* Understand how calculations are computed in carbon calculated
+* Be familiar with Object Templates, Generic Objects, and Relatable Categories
+* Know what you can do with a successful calculation
+
+endprologue.
+
+h3. Object Templates
+
+NOTE: This is currently under construction
+
+WARNING: This is currently under construction

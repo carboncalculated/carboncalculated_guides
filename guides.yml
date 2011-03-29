@@ -1,0 +1,42 @@
+title: CarbonCalculated Guides
+description: These guides are designed to help you get up and running and feeling productive with CarbonCalculated.
+
+authors:
+  Documentation Team:
+    - name: Richard Hooker
+      nick: hookercookerman
+      description: Richard Hooker is a core developer for CarbonCalculated
+  Owners:
+    - name: Darragh Browne
+      nick: daz
+      description: Darragh Browne is carbon!
+
+index:
+  Fundamentals:
+    - title: Getting Started
+      url: getting_started
+      text: Jump start your CarbonCalculated development by playing along as we build a fully functional Car application.
+      construction: true
+    - title: Core Concepts
+      url: core_concepts
+      text: In this guide, we will touch on many of the core concepts of CarbonCaclulated like Generic Objects, Relatable Categories And Answers
+      construction: true
+  API:
+    - title: Overview
+      url: api_overview
+      text: This guide give an overview of the CarbonCalcualted API
+    - title: Authentication
+      url: authentication
+      text: This guide covers what is needed for an authentication 
+      construction: true
+    - title: Getting Emissions Results
+      url: getting_emission_results
+      text: This guide covers the best way and development work flow to get carbon results quick and easy
+      construction: true  
+  Tutorials:
+    - title: Journey Application
+      url: journey_application
+      text: A simple Journey Application that can calculated your emissions
+    - title: Successive Drop Downs (Easy user entry)
+      url: successive_drop_downs
+      text: Learn how to create successive drop downs allowing you to give the user the options they need
