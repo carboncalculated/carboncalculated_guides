@@ -1,0 +1,48 @@
+dd img {
+  float: left;
+  height: 36px;
+  margin-right: 10px;
+}
+
+#header {
+  background: none;
+  background-color: #343940;
+  border-top: 2px solid #464B52;
+}
+
+#topNav{
+  color: #C3C3C3;
+} 
+
+#header .nav a {
+  color: #C3C3C3;
+}
+
+#header .nav .index, #header .nav .index a {
+  background-color: #2A8008;
+  background-image: none;
+  color: #fff;
+}
+
+#guides {
+  background-color: #2A8008;
+  color: #5FBB58;
+}
+
+#guides hr {
+  background-color: #5FBB58;
+}
+
+#mainCol a, #subCol a, #feature a, a, a:link, a:visited {
+  color: #0A6008;
+}
+  
+#header h1 {
+  padding: 0px;
+  margin: 0px;
+  background-image: url(../images/logo.png);
+  width: 350px !important;
+  background-size: 350px 32px;
+  background-position: 0px 14px;
+  overflow: visible
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>CarbonCalculated Guides: Contribute</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="stylesheets/overrides.style.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/overrides.print.css" media="print" />
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/syntaxhighlighter/shCore.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/syntaxhighlighter/shThemeRailsGuides.css" />
+</head>
+<body class="guide">
+  <div id="topNav">
+    <div class="wrapper">
+      
+    </div>
+  </div>
+  <div id="header">
+    <div class="wrapper clearfix">
+      <h1><a href="index.html" title="Return to home page">CarbonCalculated Guides</a></h1>
+      <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Guides Index <span id="guidesArrow">&#9656;</span></a>
+          <div id="guides" class="clearfix" style="display: none;">
+            <hr />
+            <dl class="L">
+    <dt>Fundamentals</dt>
+      <dd>Getting Started</dd>
+      <dd><a href="core_concepts.html">Core Concepts</a></dd>
+    <dt>API</dt>
+      <dd>Overview</dd>
+      <dd>Authentication</dd>
+      <dd>Getting Emissions Results</dd>
+</dl>
+<dl class="R">
+    <dt>Tutorials</dt>
+      <dd>Journey Application</dd>
+      <dd>Successive Drop Downs (Easy user entry)</dd>
+</dl>
+
+
+          </div>
+        </li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="hide" />
+
+  <div id="feature">
+    <div class="wrapper">
+      <h2>Contribute</h2>
+<p>The CarbonCalculated documentation team welcomes any and all help from the community. If you are interested in contributing to the effort, the information below will let you know how to do so and who to contact in order to get help and guidance.</p>
+            <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="" />Chapters</h3>
+        <ol class="chapters">
+<li><a href="#how-to-contribute">How to Contribute?</a><ul><li><a href="#if-you-use-osx-and-aren-t-a-ruby-developer">If You Use <span class="caps">OSX</span> and Aren&#8217;t a Ruby Developer</a></li> <li><a href="#if-you-re-a-ruby-developer">If You&#8217;re a Ruby Developer</a></li></ul></li><li><a href="#create-your-guide">Create Your Guide</a></li></ol></div>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="wrapper">
+      <div id="mainCol">
+        <h3 id="how-to-contribute">1 How to Contribute?</h3>
+<p>First, you will need to fork the CarbonCalculated guides repository from Github. Go to https://github.com/carboncalculated/carboncalculated_guides and click the Fork button. Then, check your forked copy out onto your local machine.</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ git clone git://github.com/&lt;yourname&gt;/carboncalculated_guides.git
+</pre>
+</div>
+</notextile>
+
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ git remote add upstream git://github.com/carboncalculated/carboncalculated_guides.git
+</pre>
+</div>
+</notextile>
+
+<p>For each guide you write, you will want to create a new branch:</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ git fetch upstream
+$ git checkout -b &lt;yourtopic&gt; upstream/master
+</pre>
+</div>
+</notextile>
+
+<p>This will create a new branch for you to work on your new guide or to edit an existing guide. Next, you will need to get the <tt>guides</tt> executable.</p>
+<h4 id="if-you-use-osx-and-aren-t-a-ruby-developer">1.1 If You Use <span class="caps">OSX</span> and Aren&#8217;t a Ruby Developer</h4>
+<p>The easiest way to get started with the guides on <span class="caps">OSX</span> is to download and install the <a href="http://.pkg">guides pkg</a>. This will give you the <tt>guides</tt> executable on your machine, and does not require you to have a C compiler on your computer.</p>
+<h4 id="if-you-re-a-ruby-developer">1.2 If You&#8217;re a Ruby Developer</h4>
+<p>You can use the normal bundler workflow to develop the guides:</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ gem install bundler
+$ bundle install --binstubs
+</pre>
+</div>
+</notextile>
+
+<p>For the rest of this guide, when the <tt>guides</tt> command is references, prefix it with <tt>bin</tt>. For instance, if you are instructed to run <tt>guides preview</tt>, instead run <tt>bin/guides preview</tt>.</p>
+<h3 id="create-your-guide">2 Create Your Guide</h3>
+<p>Create a new guide <tt><name>.textile</tt> from the following template:</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+h2. Guide Topic
+
+This guide covers ... After reading this guide, you will be able to:
+
+* Make a list of the things you will cover
+* This should be a relatively high level list
+* It should cover what the reader will know how to do once done
+
+endprologue.
+
+h3. Topics Should Use h3
+
+Each topic should use an h3.
+</pre>
+</div>
+</notextile>
+
+<p>To preview your guide as you write it, run the <tt>preview</tt> command.</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ guides preview
+&gt;&gt; Thin web server (v1.2.7 codename No Hup)
+&gt;&gt; Maximum connections set to 1024
+&gt;&gt; Listening on 0.0.0.0:9292, CTRL+C to stop
+</pre>
+</div>
+</notextile>
+
+<p>Go to <tt>http://localhost:9292/<guide-name>.html</tt> in a browser. After making a change, refresh to see it update live.</p>
+<h3>Updating <tt>guides.yml</tt></h3>
+<p>You will also want to update the main <tt>guides.yml</tt> in the root of the repository with your new guide. First, decide which section your guide will go under. In general, new guides will go under the <tt>Digging Deeper</tt> section.</p>
+<p>Next, create a new entry for your guide. You will need to decide on a title and description. For the <span class="caps">URL</span>, enter the filename you used for your guide, without the <tt>.textile</tt> ending. An entry will look something like this:</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+index:
+  Carbon Disclosure Project Information:
+    - title: Using Carbon Calculated For Carbon Disclosure Project
+      url: carbon_discolure_project
+      text: &quot;Learn how to use carbon calculated to produce a carbon disclosure project aware application&quot;
+</pre>
+</div>
+</notextile>
+
+<p>Once you are done, push your guide to your fork:</p>
+<notextile>
+<div class="code_container">
+<pre class="brush: plain; gutter: false; toolbar: false">
+$ git push origin &lt;branch&gt;
+</pre>
+</div>
+</notextile>
+
+<p>Next, submit a pull request from your repository. Make sure to make the pull request using the branch you used for the guide.</p>
+<h3>Some Guidelines</h3>
+<ul>
+	<li>Guides are written in a modified Textile. Fro example,s take a look at existing guides, or some of the <a href="https://github.com/rails/rails/tree/master/railties/guides/source">Rails Guides</a> for some examples</li>
+	<li>For now, follow the <a href="https://github.com/lifo/docrails/wiki/rails-guides-conventions">Rails Guides Conventions</a>.</li>
+	<li>Assets are stored in the <tt>assets</tt> directory.</li>
+</ul>
+<h3>What to Contribute?</h3>
+<ul>
+	<li>We need authors, editors, proofreaders, and translators. Adding a single paragraph of quality content to a guide is a good way to get started.</li>
+	<li>The easiest way to start is by improving an existing guide:
+	<ul>
+		<li>Improve the structure to make it more coherent.</li>
+		<li>Add missing information.</li>
+		<li>Correct any factual errors.</li>
+		<li>Fix typos or improve style.</li>
+	</ul></li>
+	<li>We&#8217;re also open to suggestions for entire new guides:
+	<ul>
+		<li>Contact the documentation team to get your idea approved. See the Contact section below.</li>
+	</ul></li>
+</ul>
+<h3>What is the process?</h3>
+<ul>
+	<li>Follow the instructions above to fork the repository and submit a pull request.</li>
+	<li>If you are a regular committer we will give you direct commit access.</li>
+</ul>
+<h3>Rules</h3>
+<ul>
+	<li>Guides are licensed under a Creative Commons Attribution-Share Alike 3.0 License.</li>
+	<li>If you&#8217;re not sure whether a guide is actively being worked on, stop by <span class="caps">IRC</span> (information below) and ask.</li>
+</ul>
+<h3>Contact</h3>
+<ul>
+	<li>Twitter: <a href="http://twitter.com/#!/carbonhq">@carbonhq</a></li>
+	<li>Email : support@carboncalculated.com</li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hide" />
+  <div id="footer">
+    <div class="wrapper">
+      
+    </div>
+  </div>
+
+  <script type="text/javascript" src="javascripts/guides.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shCore.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushRuby.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushJScript.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushCss.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushXml.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushSql.js"></script>
+  <script type="text/javascript" src="javascripts/syntaxhighlighter/shBrushPlain.js"></script>
+  <script type="text/javascript">
+    SyntaxHighlighter.all()
+  </script>
+</body>
+</html>

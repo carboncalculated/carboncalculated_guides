@@ -16,7 +16,7 @@ set :root, File.dirname(output)
 set :public, output
 
 get "/" do
-  File.read(File.join(output, 'index.html'))
+  File.read(File.join(output, 'indx.html'))
 end
 run Sinatra::Application
 
