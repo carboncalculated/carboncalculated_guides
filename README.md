@@ -9,7 +9,7 @@ These guides are based on the [Rails Guides](http://guides.rubyonrails.org/).
 
 In order to start generating documentation, complete the following steps:
 
-- clone SproutGuides from git://github.com/carboncalculated/carboncalculated_guides.git
+- clone CarbonCalculatedGuides from git://github.com/carboncalculated/carboncalculated_guides.git
 - cd into carboncalculated_guides and run `guides generate` to generate the output directory
 
 Once you've completed these steps, you're ready to start working with
