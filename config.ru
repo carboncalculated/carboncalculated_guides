@@ -9,5 +9,13 @@ rescue LoadError
 end
 
 Bundler.require(:default)
-require "guides/preview"
-run Guides::App.new
+
+require 'rack/contrib'
+require 'rack-rewrite'
+
+use Rack::Static, :urls => ['/output/images', '/output/stylesheets', '/output/javascripts'], :root => "output"
+use Rack::ETag
+use Rack::Rewrite do
+  rewrite '/', '/index.html'
+end
+run Rack::Directory.new('output')
