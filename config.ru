@@ -10,15 +10,14 @@ end
 
 Bundler.require(:default)
 
-require 'rack/contrib'
-require 'rack-rewrite'
-
 output = File.expand_path("../output", __FILE__)
+require 'sinatra'
+set :root, File.dirname(output)
+set :public, output
 
-use Rack::Static, :urls => ['/images', '/stylesheets', '/javascripts'], :root => output
-use Rack::Rewrite do
-  rewrite '/', "/index.html"
+get "/" do
+  File.read(File.join('output', 'index.html'))
 end
-run Rack::File.new('output')
+run Sinatra::Application
 
 

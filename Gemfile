@@ -4,6 +4,5 @@ if ENV["GUIDES_PATH"]
   gem "guides", :path => ENV["GUIDES_PATH"]
 else
   gem "guides", '~> 0.6.5'
-  gem "rack-rewrite"
-  gem "rack-contrib"
+  gem "sinatra"
 end
