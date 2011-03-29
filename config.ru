@@ -17,7 +17,7 @@ output = File.expand_path("../output", __FILE__)
 
 use Rack::Static, :urls => ['/images', '/stylesheets', '/javascripts', "/index.html"], :root => output
 use Rack::Rewrite do
-  rewrite '/', 'index.html'
+  rewrite '/', "#{output}/index.html"
 end
 run Rack::Directory.new(output) 
 
