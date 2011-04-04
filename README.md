@@ -1,4 +1,4 @@
-SproutGuides
+CarbonCalculatedGuides
 ============
 
 Documentation for the CarbonCalculated framework. For more information on CarbonCalculated,
